@@ -1,19 +1,180 @@
 <html>
-    <head>
-        <title>Rectangles</title>
-        <style>
-            canvas {
-                width: 100%;
-                height: 100%;
-                display: block;
-            }
-            body {
-                margin: 0;
-            }
-        </style>
-    </head>
-    <body>
+
+<head>
+    <title>Rectangles</title>
+    <style>
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        body {
+            font-family: "Lucida Console", Monaco, monospace;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            background-color: #F8F5EC;
+        }
+
+        .column {
+            display: flex;
+        }
+
+        .sidebar {
+            white-space: nowrap;
+        }
+
+        .box {
+            display: flex;
+            flex-grow: 1;
+            border: 1.5px solid black;
+            margin: .5rem;
+            background-color: #F6D55C;
+            flex-direction: column;
+        }
+
+        .subtitle {
+            margin-top: .25rem;
+            display: flex;
+            padding: .5rem;
+            margin-left: .5rem;
+        }
+
+        .title {
+            margin-top: .25rem;
+            display: flex;
+            align-self: center;
+            padding: .5rem;
+            font-size: larger;
+        }
+
+        .title::before {
+            content: "\2014";
+        }
+
+        .title::after {
+            content: "\2014";
+        }
+
+        .rangewrapper {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            cursor: pointer;
+            margin-top: auto;
+            display: flex;
+            background-color: #F8F5EC;
+            border: 1.5px solid black;
+            align-self: center;
+            padding: .25rem;
+            margin-bottom: 1rem;
+        }
+
+        .button:hover {
+            background-color: whitesmoke;
+        }
+
+        .checkbox {
+            cursor: pointer;
+            margin: .5rem;
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: #F8F5EC;
+            border: 1.5px solid black;
+        }
+
+        .checkbox:hover {
+            background-color: whitesmoke;
+        }
+
+        .checkbox::before {
+            display: none;
+        }
+
+        .checkbox.checked::before {
+            content: "";
+            display: block;
+            background-color: black;
+            width: 1rem;
+            height: 1rem;
+            margin: .25rem;
+        }
+
+        .checkboxwrapper {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .checkboxlabel {
+            align-self: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .textinput {
+            font-family: inherit;
+            background-color: #F8F5EC;
+            border: 2px solid black;
+            font-size: 1rem;
+            padding: 7px 7px;
+            margin: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://aidanblumlevine.github.io/rectangles/slider.css">
+</head>
+
+<body>
+    <div class="column">
         <canvas id="canvas"></canvas>
-    </body>
-    <script src="https://aidanblumlevine.github.io/rectangles/pack.js"></script>
+    </div>
+    <div class="column sidebar">
+        <div class="box">
+            <div class="title"> settings </div>
+            <div class="subtitle"> generation speed </div>
+            <div class="rangewrapper">
+                <input type="range" min="0" max="1000" value="700" id="generationspeed"></input>
+            </div>
+            <div class="checkboxwrapper">
+                <div class="checkbox checked" id="enablegrouping"></div>
+                <div class="checkboxlabel">
+                    enable grouping
+                </div>
+            </div>
+            <div class="checkboxwrapper">
+                <div class="checkbox checked" id="enablesidelines"></div>
+                <div class="checkboxlabel">
+                    enable sidelines
+                </div>
+            </div>
+            <div class="checkboxwrapper">
+                <div class="checkbox checked" id="enablemulti"></div>
+                <div class="checkboxlabel">
+                    enable multi cuts
+                </div>
+            </div>
+            <div class="subtitle"> min cell size </div>
+            <div class="rangewrapper">
+                <input type="range" min="200" max="3000" value="1000" id="mincellsize"></input>
+            </div>
+            <div class="subtitle"> max cuts </div>
+            <div class="rangewrapper">
+                <input type="range" min="0" max="30" value="10" id="maxcuts"></input>
+            </div>
+            <div class="subtitle"> shadow strength </div>
+            <div class="rangewrapper">
+                <input type="range" min="0" max="100" value="25" id="shadow"></input>
+            </div>
+            <input type="text" class="textinput" id="seed" placeholder="seed"></input>
+            <div class="button" id="generate">generate</div>
+        </div>
+    </div>
+
+</body>
+<script src="https://aidanblumlevine.github.io/rectangles/pack.js"></script>
+
 </html>
