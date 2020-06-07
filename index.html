@@ -65,7 +65,6 @@
 
         .button {
             cursor: pointer;
-            margin-top: auto;
             display: flex;
             background-color: #F8F5EC;
             border: 1.5px solid black;
@@ -124,8 +123,11 @@
             padding: 7px 7px;
             margin: 1rem;
         }
+        .bottom {
+            margin-top: auto;
+        }
     </style>
-    <link rel="stylesheet" href="https://aidanblumlevine.github.io/rectangles/slider.css">
+    <link rel="stylesheet" href="slider.css">
 </head>
 
 <body>
@@ -169,12 +171,17 @@
             <div class="rangewrapper">
                 <input type="range" min="0" max="100" value="25" id="shadow"></input>
             </div>
+            <div class="subtitle"> line strength </div>
+            <div class="rangewrapper">
+                <input type="range" min="0" max="15" value="2" id="linewidth"></input>
+            </div>
             <input type="text" class="textinput" id="seed" placeholder="seed"></input>
-            <div class="button" id="generate">generate</div>
+            <div class="button bottom" id="generate">generate</div>
+            <div class="button" id="download">download</div>
         </div>
     </div>
 
 </body>
-<script src="https://aidanblumlevine.github.io/rectangles/pack.js"></script>
+<script src="/pack.js"></script>
 
 </html>
