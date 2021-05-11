@@ -16,7 +16,7 @@
     "@types/seedrandom": "^2.4.28",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "seedrandom": "^3.0.5",
     "seen": "^0.2.7",
     "ts-loader": "^7.0.5",
