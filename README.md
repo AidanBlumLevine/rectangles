@@ -8,5 +8,5 @@ Images can be customized, generated, and downloaded from the site below.
 
 **Demo here: https://aidanblumlevine.github.io/rectangles/**
 
-![example 1](https://aidanblumlevine.github.io/rectangles/blob/master/rectangle_1549539910.png)
-![example 2](https://aidanblumlevine.github.io/rectangles/blob/master/rectangle_748904660.png)
+![example 1](https://github.com/AidanBlumLevine/rectangles/blob/master/rectangle_1549539910.png)
+![example 2](https://github.com/AidanBlumLevine/rectangles/blob/master/rectangle_748904660.png)
