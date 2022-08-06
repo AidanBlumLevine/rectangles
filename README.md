@@ -2,7 +2,7 @@
 
 Recursive subdivision of a rectangle to create procedurally generated art. This was inspired by [this](https://generated.space/sketch/ballots-client/) work by Kjetil Golid.
 
-Orthagonal 3D rendering is performed entirely in the 2D canvas without WebGL, using the [painter's method](https://en.wikipedia.org/wiki/Painter%27s_algorithm)
+Orthagonal 3D rendering is performed entirely in the 2D canvas without WebGL, using the [painter's method](https://en.wikipedia.org/wiki/Painter%27s_algorithm).
 
 Images can be customized, generated, and downloaded from the site below.
 
